@@ -17,7 +17,7 @@ public:
 	int getYear();
 	//Getters
 
-	void setDay(int D);
+	void setDay(int day);
 	void setMonth(int M);
 	void setYear(int Y);
 	//Setters
