@@ -10,6 +10,7 @@ private:
 public:
 	Date();
 	Date(int D, int M, int Y);
+	Date(Date& d);
 	//Constructors
 
 	int getDay();

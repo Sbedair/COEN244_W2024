@@ -14,6 +14,12 @@ Date::Date(int D, int M, int Y) {
 	year = Y;
 }
 
+Date::Date(Date& d) {
+	day = d.day;
+	month = d.month;
+	year = d.year;
+}
+
 int Date::getDay() {
 	return day;
 }

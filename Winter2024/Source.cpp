@@ -7,12 +7,19 @@ using namespace std;
 int main() {
 	int s[4];
 	int* ptr;
-	ptr[0];
-	ptr[1];
-	Students S("karen", "business");
-	Students* s2 = new Students("Alex", "COEN");
+	Date Bday(1, 1, 2001);
+	Date Bday2(2, 3, 2005);
+	Students S("karen", "business",Bday);
+	Students* s2 = new Students("Alex", "COEN",Bday2);
 	cout << S.getID() << " " << s2->getID() << endl;
-	delete s2;
 	cout << endl << S.getStudentCount() << endl;
+	Date Bday3(2, 2, 2);
+	cout << s2->getDoB().getDay() << "/" << s2->getDoB().getMonth() << "/" << s2->getDoB().getYear() << endl;
+	s2->setDoB(Bday3);
+	cout << s2->getDoB().getDay() << "/" << s2->getDoB().getMonth() << "/" << s2->getDoB().getYear() << endl;
+	s2->setDayoB(4);
+	cout << s2->getDoB().getDay() << "/" << s2->getDoB().getMonth() << "/" << s2->getDoB().getYear();
+
+	delete s2;
 }
 

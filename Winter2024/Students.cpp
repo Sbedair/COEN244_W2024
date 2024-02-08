@@ -3,11 +3,13 @@
 
 static int num = 0;
 
-Students::Students(std::string n, std::string m) {
+Students::Students(std::string n, std::string m, Date &D) {
 	name = n;
 	major = m;
 	ID = num+40000000;
 	num++;
+	DoB = D;
+	DoE = new Date(8,2,2024);
 }
 Students::Students(Students& s1) {
 	ID = num;
@@ -20,6 +22,15 @@ Students::~Students() {
 }
 int Students::getID() {
 	return ID;
+}
+Date Students::getDoB() {
+	return DoB;
+}
+void Students::setDoB(Date d) {
+	DoB = d;
+}
+void Students::setDayoB(int d) {
+	 DoB.setDay(d);
 }
 int Students::getStudentCount() {
 	return num ;
