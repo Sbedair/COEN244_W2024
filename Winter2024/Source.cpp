@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Date.h"
 #include "Students.h"
+#include "TA.h"
 
 using namespace std;
 
@@ -14,12 +15,12 @@ int main() {
 	cout << S.getID() << " " << s2->getID() << endl;
 	cout << endl << S.getStudentCount() << endl;
 	Date Bday3(2, 2, 2);
-	cout << s2->getDoB().getDay() << "/" << s2->getDoB().getMonth() << "/" << s2->getDoB().getYear() << endl;
+	cout << "Student " << s2->getID()<< " Has birthday " << s2->getDoB().getDay() << "/" << s2->getDoB().getMonth() << "/" << s2->getDoB().getYear() << endl;
 	s2->setDoB(Bday3);
 	cout << s2->getDoB().getDay() << "/" << s2->getDoB().getMonth() << "/" << s2->getDoB().getYear() << endl;
 	s2->setDayoB(4);
-	cout << s2->getDoB().getDay() << "/" << s2->getDoB().getMonth() << "/" << s2->getDoB().getYear();
-
+	cout << s2->getDoB().getDay() << "/" << s2->getDoB().getMonth() << "/" << s2->getDoB().getYear() << endl;
 	delete s2;
+	cout << endl;
 }
 
